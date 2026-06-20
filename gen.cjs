@@ -45,10 +45,6 @@ categories.forEach(cat => {
       html += `                <div class="card-img">\n`;
       html += `                  <img src="/assets/${encodeURIComponent(cat.folder)}/${encodeURIComponent(file)}" alt="${cat.title}">\n`;
       html += `                </div>\n`;
-      html += `                <div class="card-content">\n`;
-      html += `                  <h4>${cat.title}</h4>\n`;
-      html += `                  <p>${cat.desc}</p>\n`;
-      html += `                </div>\n`;
       html += `              </div>\n`;
     });
   }
