@@ -32,10 +32,18 @@ test.describe('Mukund Polymers Website E2E', () => {
     const product5 = page.locator('text=Other Services').first();
     await expect(product5).toBeVisible();
 
-    // Check catalogue download button
-    const downloadBtn = page.locator('text=Download Product Catalogue');
-    await expect(downloadBtn).toBeVisible();
-    await expect(downloadBtn).toHaveAttribute('href', '/documents/S & T RUBBER CATALOGUE.pdf');
+    // Check catalogue download buttons
+    const downloadBtn1 = page.locator('text=📄 S&T Rubber Catalogue');
+    await expect(downloadBtn1).toBeVisible();
+    await expect(downloadBtn1).toHaveAttribute('href', '/documents/S & T RUBBER CATALOGUE.pdf');
+
+    const downloadBtn2 = page.locator('text=📄 EPDM Specules Photos');
+    await expect(downloadBtn2).toBeVisible();
+    await expect(downloadBtn2).toHaveAttribute('href', '/documents/S%26T%20Rubber%20Flooring%20EPDM%20SPECULES%20Photos.pdf');
+
+    const downloadBtn3 = page.locator('text=📄 Rubber Flooring Photos');
+    await expect(downloadBtn3).toBeVisible();
+    await expect(downloadBtn3).toHaveAttribute('href', '/documents/S%26T%20Rubber%20Flooring%20Photos.pdf');
 
     // Check contact section
     const contactHeading = page.locator('#contact h3');
